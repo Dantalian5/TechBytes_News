@@ -1,0 +1,27 @@
+{
+	"name": "techbytes_news",
+	"version": "1.0.0",
+	"description": "TechBytes_News is a non-commercial, open-source project designed to function as a technology news application.",
+	"source": [
+		"src/index.html"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Marcos Valenzuela",
+	"license": "MIT",
+	"devDependencies": {
+		"eslint": "^8.54.0",
+		"parcel": "^2.10.3",
+		"parcel-namer-custom": "^0.2.0"
+	},
+	"parcel-namer-custom": {
+		".css$": "assets/style/[name].[hash].[type]",
+		".js$": "assets/js/[name].[hash].[type]",
+		".ttf$": "assets/fonts/[name].[hash].[type]",
+		".svg$|.jpg$|.png$|.webp$|.webmanifest$": "assets/images/[name].[hash].[type]",
+		".pdf$": "assets/docs/[name].[hash].[type]",
+		".wav$": "assets/audio/[name].[hash].[type]"
+	}
+}
