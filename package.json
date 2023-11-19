@@ -6,12 +6,16 @@
 		"src/index.html"
 	],
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "parcel src/index.html",
+		"build": "parcel build --no-content-hash --public-url ./ --dist-dir public"
 	},
 	"keywords": [],
 	"author": "Marcos Valenzuela",
 	"license": "MIT",
 	"devDependencies": {
+		"@parcel/packager-raw-url": "^2.10.3",
+		"@parcel/transformer-webmanifest": "^2.10.3",
 		"eslint": "^8.54.0",
 		"parcel": "^2.10.3",
 		"parcel-namer-custom": "^0.2.0"
