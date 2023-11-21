@@ -39,9 +39,9 @@
 		<link rel="stylesheet" href="./assets/styles/style.scss" />
 	</head>
 	<body>
-		<div class="navbar">
-			<div class="navbar__logo">
-				<div class="logo">
+		<div class="l-navbar">
+			<div class="navlogo">
+				<div class="navlogo__logo">
 					<svg
 						width="2.625rem"
 						height="2.625rem"
@@ -69,13 +69,247 @@
 						</g>
 					</svg>
 				</div>
-				<div class="name"></div>
+				<h1 class="navlogo__name f-heading f-heading--S">
+					<span>TechBytes</span>_News
+				</h1>
 			</div>
-			<div class="navbar__menu"></div>
+			<div class="l-navbar__menu navmenu">
+				<button id="js-navmenu__btn" class="navmenu__btn" title="Menu">
+					<svg
+						class="hamburger__box"
+						xmlns="http://www.w3.org/2000/svg"
+						width="1em"
+						height="1em"
+						viewBox="0 0 24 24"
+						fill="currentColor"
+					>
+						<rect
+							class="hamburger__line hamburger__top"
+							width="20"
+							height="2.5"
+							x="2"
+							y="4.75"
+							rx="2"
+						></rect>
+						<rect
+							class="hamburger__line hamburger__middle"
+							width="20"
+							height="2.5"
+							x="2"
+							y="10.75"
+							rx="2"
+						></rect>
+						<rect
+							class="hamburger__line hamburger__bottom"
+							width="20"
+							height="2.5"
+							x="2"
+							y="16.75"
+							rx="2"
+						></rect>
+					</svg>
+				</button>
+				<ul id="js-navmenu__items" class="navmenu__items">
+					<li class="navmenu__item">
+						<a class="f-heading f-heading--S" href="#">Latest</a>
+					</li>
+					<li class="f-heading f-heading--S">
+						<a class="navmenu__link" href="#">Top</a>
+					</li>
+					<li class="f-heading f-heading--S">
+						<a class="navmenu__link" href="#">Best</a>
+					</li>
+					<li class="f-heading f-heading--S">
+						<a class="navmenu__link" href="#">Newsletter</a>
+					</li>
+				</ul>
+			</div>
 		</div>
-		<div class="header"></div>
-		<div class="content"></div>
-		<div class="newsletter"></div>
-		<div class="footer"></div>
+		<div class="header">
+			<div>
+				<h2>TechBytes</h2>
+				<img src="./assets/img/hero.png" alt="a computer with code" />
+				<h2>News</h2>
+			</div>
+			<div>
+				<h2>Top Stories</h2>
+				<div>
+					<div>
+						<h3>Lorem Ipsum Dolor Sit</h3>
+						<p>by <span>Author Name</span></p>
+						<p>at <span>-- / -- / -- </span></p>
+						<p>on <span>https://www.example.com/news/this</span></p>
+					</div>
+					<div>
+						<h3>Lorem Ipsum Dolor Sit</h3>
+						<p>by <span>Author Name</span></p>
+						<p>at <span>-- / -- / -- </span></p>
+						<p>on <span>https://www.example.com/news/this</span></p>
+					</div>
+					<div>
+						<h3>Lorem Ipsum Dolor Sit</h3>
+						<p>by <span>Author Name</span></p>
+						<p>at <span>-- / -- / -- </span></p>
+						<p>on <span>https://www.example.com/news/this</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<h2>Latest News</h2>
+			<div>
+				<h3>Lorem Ipsum Dolor Sit</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur. Risus aliquam velit felis
+					scelerisque. Tortor tortor at urna nunc.
+				</p>
+				<p>by <span>Author Name</span></p>
+				<p>at <span>-- / -- / -- </span></p>
+				<p>on <span>https://www.example.com/news/this</span></p>
+			</div>
+			<div>
+				<h3>Lorem Ipsum Dolor Sit</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur. Risus aliquam velit felis
+					scelerisque. Tortor tortor at urna nunc.
+				</p>
+				<p>by <span>Author Name</span></p>
+				<p>at <span>-- / -- / -- </span></p>
+				<p>on <span>https://www.example.com/news/this</span></p>
+			</div>
+			<div>
+				<h3>Lorem Ipsum Dolor Sit</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur. Risus aliquam velit felis
+					scelerisque. Tortor tortor at urna nunc.
+				</p>
+				<p>by <span>Author Name</span></p>
+				<p>at <span>-- / -- / -- </span></p>
+				<p>on <span>https://www.example.com/news/this</span></p>
+			</div>
+			<div>
+				<h3>Lorem Ipsum Dolor Sit</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur. Risus aliquam velit felis
+					scelerisque. Tortor tortor at urna nunc.
+				</p>
+				<p>by <span>Author Name</span></p>
+				<p>at <span>-- / -- / -- </span></p>
+				<p>on <span>https://www.example.com/news/this</span></p>
+			</div>
+			<div>
+				<h3>Lorem Ipsum Dolor Sit</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur. Risus aliquam velit felis
+					scelerisque. Tortor tortor at urna nunc.
+				</p>
+				<p>by <span>Author Name</span></p>
+				<p>at <span>-- / -- / -- </span></p>
+				<p>on <span>https://www.example.com/news/this</span></p>
+			</div>
+			<div>
+				<h3>Lorem Ipsum Dolor Sit</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur. Risus aliquam velit felis
+					scelerisque. Tortor tortor at urna nunc.
+				</p>
+				<p>by <span>Author Name</span></p>
+				<p>at <span>-- / -- / -- </span></p>
+				<p>on <span>https://www.example.com/news/this</span></p>
+			</div>
+			<div>
+				<h3>Lorem Ipsum Dolor Sit</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur. Risus aliquam velit felis
+					scelerisque. Tortor tortor at urna nunc.
+				</p>
+				<p>by <span>Author Name</span></p>
+				<p>at <span>-- / -- / -- </span></p>
+				<p>on <span>https://www.example.com/news/this</span></p>
+			</div>
+			<div>
+				<h3>Lorem Ipsum Dolor Sit</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur. Risus aliquam velit felis
+					scelerisque. Tortor tortor at urna nunc.
+				</p>
+				<p>by <span>Author Name</span></p>
+				<p>at <span>-- / -- / -- </span></p>
+				<p>on <span>https://www.example.com/news/this</span></p>
+			</div>
+			<div>
+				<h3>Lorem Ipsum Dolor Sit</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur. Risus aliquam velit felis
+					scelerisque. Tortor tortor at urna nunc.
+				</p>
+				<p>by <span>Author Name</span></p>
+				<p>at <span>-- / -- / -- </span></p>
+				<p>on <span>https://www.example.com/news/this</span></p>
+			</div>
+			<div>
+				<h3>Lorem Ipsum Dolor Sit</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur. Risus aliquam velit felis
+					scelerisque. Tortor tortor at urna nunc.
+				</p>
+				<p>by <span>Author Name</span></p>
+				<p>at <span>-- / -- / -- </span></p>
+				<p>on <span>https://www.example.com/news/this</span></p>
+			</div>
+			<div>
+				<button>Prev</button>
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+				<button>Next</button>
+			</div>
+		</div>
+		<div class="newsletter">
+			<h2>Newsletter</h2>
+			<form action="">
+				<input type="text" title="Enter your email" placeholder="Your name" />
+				<input type="email" title="Enter your email" placeholder="Your email" />
+				<button type="submit">Suscribe Me</button>
+			</form>
+		</div>
+		<div class="footer">
+			<div class="navbar__logo">
+				<div class="logo">
+					<!-- <svg
+						width="2.625rem"
+						height="2.625rem"
+						viewBox="0 0 16.933334 16.933334"
+					>
+						<defs id="" />
+						<g
+							inkscape:label="Layer 1"
+							inkscape:groupmode="layer"
+							id="layer1"
+							transform="translate(-75.986574,-84.959157)"
+						>
+							<path
+								id="rect11647"
+								style="
+									opacity: 1;
+									fill: currentColor;
+									fill-opacity: 1;
+									stroke-width: 1.07701;
+									stroke-linecap: round;
+									stroke-linejoin: round;
+								"
+								d="m 79.698649,84.959155 c -2.062988,0 -3.712073,1.788656 -3.712073,3.933503 v 9.06577 c 0,2.144852 1.649085,3.934062 3.712073,3.934062 h 9.509188 c 2.062988,0 3.712072,-1.78921 3.712072,-3.934062 v -9.06577 c 0,-2.144847 -1.649084,-3.933503 -3.712072,-3.933503 z m 0,1.592734 h 4.130404 c -0.0013,0.0022 -0.0022,0.0046 -0.0022,0.0073 v 0.943614 a 1.1810748,1.2043203 0 0 0 -0.557776,1.022294 1.1810748,1.2043203 0 0 0 1.181139,1.204386 1.1810748,1.2043203 0 0 0 1.181139,-1.204386 1.1810748,1.2043203 0 0 0 -0.595806,-1.045899 v -0.920009 c 0,-0.0027 -9.5e-4,-0.0051 -0.0022,-0.0073 h 4.174497 c 1.182836,0 2.150081,1.009549 2.150081,2.340769 v 9.06577 c 0,1.33122 -0.967245,2.343022 -2.150081,2.343022 h -4.15245 v -2.551527 h 1.908122 c 0.0055,0 0.01045,-0.0029 0.01323,-0.0073 2.212455,-0.32572 2.293657,-2.560977 1.287512,-3.576065 0.947009,-1.197377 0.52391,-3.172463 -1.406563,-3.356881 -2.5e-5,0.0015 2.4e-5,0.0025 0,0.0039 h -7.100061 c -0.0081,0 -0.01434,0.0063 -0.01434,0.01462 v 1.243165 c 0,0.0083 0.0062,0.01462 0.01434,0.01462 h 1.24342 v 5.797125 c 0,0.0079 0.0065,0.01405 0.01432,0.01405 h 1.269876 c 0.0078,0 0.01378,-0.0061 0.01378,-0.01405 v -5.797125 h 4.576845 c 0.0061,0 0.0115,-0.0037 0.01378,-0.009 0.761509,0.147659 1.013733,0.899736 0.222118,1.489887 h -0.855402 a 1.1105475,1.132405 0 0 0 -0.928156,-0.510867 1.1105475,1.132405 0 0 0 -1.11059,1.132449 1.1105475,1.132405 0 0 0 1.11059,1.131886 1.1105475,1.132405 0 0 0 0.927604,-0.511428 h 0.882962 c 0.854814,0.41972 0.656562,1.470691 -0.169207,1.635447 h -5.52e-4 c -0.0017,-6.38e-4 -0.0036,-0.0011 -0.0055,-0.0011 h -1.919697 -0.0028 -1.015239 -0.205584 c -0.001,0 -0.0018,-2e-4 -0.0028,0 -0.0067,0.0014 -0.01213,0.0073 -0.01213,0.01462 v 3.843584 H 79.69857 c -1.182835,0 -2.150081,-1.0118 -2.150081,-2.343019 V 88.89267 c 0,-1.331219 0.967246,-2.340769 2.150081,-2.340769 z"
+							/>
+						</g>
+					</svg> -->
+				</div>
+				<p><span>TechBytes</span>_News</p>
+			</div>
+			<p>Powered by Y-Combinator Hacker News Service</p>
+			<p>&copy; 2023 TechBytes_News. All rights reserved.</p>
+		</div>
+		<script type="module" src="/src/assets/js/main.js"></script>
 	</body>
 </html>

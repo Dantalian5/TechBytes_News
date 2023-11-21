@@ -1,0 +1,26 @@
+.navmenu__btn.is-active {
+	& .hamburger {
+		&__line {
+			transition: y 300ms ease-in, transform 300ms ease-in 300ms,
+				opacity 0ms 300ms;
+		}
+		&__top,
+		&__bottom {
+			y: 10.75px;
+		}
+		&__top {
+			transform: rotate(45deg);
+		}
+		&__middle {
+			opacity: 0;
+		}
+		&__bottom {
+			transform: rotate(-45deg);
+		}
+	}
+	& ~ .navmenu__items {
+		display: flex;
+		visibility: visible;
+		transition: visibility 1s;
+	}
+}
