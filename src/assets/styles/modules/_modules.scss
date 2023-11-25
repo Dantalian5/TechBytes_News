@@ -53,7 +53,7 @@
 	margin-bottom: 6rem;
 	&__title-top {
 		position: absolute;
-		font-size: 4rem;
+		font-size: clamp(2.5rem, calc(17 * 1vw), 6.1875rem);
 		top: 0;
 		left: 0;
 		mix-blend-mode: difference;
@@ -65,7 +65,7 @@
 		position: relative;
 		z-index: 1;
 		width: 100%;
-		margin-block: 2.6rem 3.5rem;
+		margin-block: 2.3rem 3.5rem;
 	}
 	&__title-center {
 		position: absolute;
@@ -75,6 +75,7 @@
 		background: rgba(255, 241, 241, 0.5);
 		width: fit-content;
 		padding: 1.25rem 0.75rem;
+		font-size: clamp(1rem, calc(8 * 1vw), 6.1875rem);
 	}
 	&__title-bottom {
 		position: absolute;
@@ -85,5 +86,51 @@
 		line-height: 0.8;
 		color: var(--color-primary);
 		mix-blend-mode: difference;
+		font-size: clamp(2.5rem, calc(23 * 1vw), 6.1875rem);
+	}
+}
+.top3 {
+	color: #fff;
+	&__title {
+		color: var(--color-accent);
+		margin-bottom: 1.25rem;
+	}
+}
+.section-title {
+	width: 100%;
+	color: var(--color-primary);
+	border-top: 1px solid var(--color-primary);
+	border-bottom: 1px solid var(--color-primary);
+	padding-block: 1rem;
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+.card {
+	padding: 2rem;
+	&--line-top {
+		border-top: 1px solid rgba(224, 224, 224, 0.5);
+	}
+	&--line-bottom {
+		border-bottom: 1px solid rgba(224, 224, 224, 0.5);
+	}
+	& > :not(:last-child) {
+		margin-bottom: 0.5rem;
+	}
+	&__head {
+		color: var(--color-primary);
+	}
+	&__text {
+		color: var(--color-secondary);
+		width: 100%;
+		display: flex;
+		gap: 0.5rem;
+	}
+	&__accent {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		color: var(--color-accent);
+	}
+	&__author {
+		text-transform: uppercase;
 	}
 }
