@@ -23,7 +23,7 @@
 	},
 	"parcel-namer-custom": {
 		".css$": "assets/style/[name].[hash].[type]",
-		".js$": "assets/js/[name].[hash].[type]",
+		".js$|.json$": "assets/js/[name].[hash].[type]",
 		".ttf$": "assets/fonts/[name].[hash].[type]",
 		".svg$|.jpg$|.png$|.webp$|.webmanifest$": "assets/images/[name].[hash].[type]",
 		".pdf$": "assets/docs/[name].[hash].[type]",

@@ -21,63 +21,103 @@ themeSwitch.addEventListener("change", (event) => {
 	}
 });
 class CardCreator {
-	constructor(title, description, author, url) {
+	constructor(title, author, url, time) {
 		this.title = title;
-		this.description = description;
 		this.author = author;
 		this.url = url;
+		const date = new Date(time * 1000).toLocaleDateString("en-US", {
+			weekday: "short",
+			year: "2-digit",
+			month: "2-digit",
+			day: "2-digit",
+			hourCycle: "h24",
+			hour: "numeric",
+			minute: "numeric",
+		});
+		this.time = date;
 	}
 	render() {
 		const card = document.createElement("div");
 		card.classList.add("card", "card--line-bottom");
 
-		const cardTitle = document.createElement("h3");
+		const cardTitle = document.createElement("a");
 		cardTitle.classList.add("card__head", "f-heading", "f-heading--M");
 		cardTitle.textContent = this.title;
-
-		const cardResume = document.createElement("p");
-		cardResume.classList.add("card__text", "f-body", "f-body--L");
-		cardResume.textContent = this.description;
+		cardTitle.href = this.url;
 
 		const cardAuthor = document.createElement("p");
 		cardAuthor.classList.add("card__text", "f-body", "f-body--M");
 		cardAuthor.textContent = "by";
 		const cardAuthorName = document.createElement("span");
-		cardAuthorName.classList.add("card__accent", "card__author");
+		cardAuthorName.classList.add("card__accent");
 		cardAuthorName.textContent = this.author;
 		cardAuthor.appendChild(cardAuthorName);
 
 		const cardUrl = document.createElement("p");
 		cardUrl.classList.add("card__text", "f-body", "f-body--M");
-		cardUrl.textContent = "by";
-		const cardUrlLink = document.createElement("span");
+		cardUrl.textContent = "link:";
+		const cardUrlLink = document.createElement("a");
 		cardUrlLink.classList.add("card__accent");
 		cardUrlLink.textContent = this.url;
+		cardUrlLink.href = this.url;
 		cardUrl.appendChild(cardUrlLink);
 
+		const cardTime = document.createElement("p");
+		cardTime.classList.add("card__text", "f-body", "f-body--S");
+		cardTime.textContent = "date:";
+		const cardTimeDate = document.createElement("span");
+		cardTimeDate.textContent = this.time;
+		cardTime.appendChild(cardTimeDate);
+
 		card.appendChild(cardTitle);
-		card.appendChild(cardResume);
 		card.appendChild(cardAuthor);
 		card.appendChild(cardUrl);
+		card.appendChild(cardTime);
 
 		return card;
 	}
 }
 
-fetch("./user.json")
+function url(id) {
+	let url = new URL(
+		`v0/${id}.json?print=pretty`,
+		"https://hacker-news.firebaseio.com"
+	);
+	return url;
+}
+
+let headers = new Headers({
+	"Content-Type": "application/json",
+	"Access-Control-Allow-Origin": "*",
+});
+fetch(url("newstories"), {
+	mode: "cors",
+	method: "GET",
+	headers: headers,
+})
 	.then((response) => {
 		if (!response.ok) {
 			throw new Error(response.statusText);
 		}
 		return response.json();
 	})
-	.then((data) => console.log(data))
+	.then((data) => {
+		getItems(data);
+	})
 	.catch((error) => {
 		console.error(`Could not get products: ${error}`);
 	});
-
-let title = "Este es el titulo";
-let description = "esta es la descripcion 1";
-let author = "Author Name";
-let url = "https://www.example.com/news/this";
-newsGrid.appendChild(new CardCreator(title, description, author, url).render());
+async function getItems(data) {
+	for (let i = 0; i < 10; i++) {
+		const response = await fetch(url(`item/${data[i]}`), {
+			mode: "cors",
+			method: "GET",
+			headers: headers,
+		});
+		const item = await response.json();
+		createCard(item.title, item.by, item.url, item.time);
+	}
+}
+function createCard(title, author, dataurl, time) {
+	newsGrid.appendChild(new CardCreator(title, author, dataurl, time).render());
+}
