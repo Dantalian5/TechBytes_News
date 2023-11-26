@@ -1,27 +1,51 @@
+.l-navbar,
+.l-header,
+.l-content,
+.l-newsletter,
+.l-footer {
+	padding-inline: max(1.5rem, 6%);
+	padding-block: 1.5rem;
+	max-width: 90rem;
+	margin-inline: auto;
+}
+
 .l-navbar {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 2.5rem;
-	padding-inline: max(1.5rem, 6%);
 }
 .l-header {
-	padding-inline: max(1.5rem, 6%);
-	padding-block: 1.5rem;
-	&__hero {
-		width: 100%;
+	margin-bottom: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 4rem 3rem;
+	&__hero,
+	&__top3 {
+		flex: 1 1 25rem;
 	}
 	&__top3 {
-		width: 100%;
+		margin-top: 5%;
 	}
 }
 .l-content {
-	padding-inline: max(1.5rem, 6%);
+	margin-bottom: 2rem;
 }
 .l-news-grid {
 	color: #fff;
+	max-width: 100%;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 	gap: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+.l-newsletter {
+	margin-bottom: 2rem;
+	&__wrapper {
+		padding-block: 1.5rem;
+		display: flex;
+		flex-wrap: wrap-reverse;
+		gap: 2rem;
+	}
 }

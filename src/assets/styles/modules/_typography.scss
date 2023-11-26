@@ -55,6 +55,10 @@ $font-open-sans: "Open Sans", sans-serif;
 	font-family: $font-open-sans;
 	font-style: normal;
 	line-height: 1.5;
+	&--S {
+		font-size: 0.8rem;
+		font-weight: 400;
+	}
 	&--M {
 		font-size: 1rem;
 		font-weight: 400;
