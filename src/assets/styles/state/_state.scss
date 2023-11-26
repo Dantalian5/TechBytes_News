@@ -70,3 +70,11 @@
 		}
 	}
 }
+@media (hover: hover) {
+	.card {
+		&__head:hover {
+			color: var(--color-accent);
+			text-decoration: underline;
+		}
+	}
+}
