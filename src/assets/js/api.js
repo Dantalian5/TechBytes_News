@@ -24,8 +24,11 @@ export async function getApiData(url) {
 		let data = await response.json();
 		return await data;
 	} catch (err) {
-		alert(
-			"Our apologies, the data has errors, we'll try to request it one more time."
-		);
+		return {
+			title: "Ups :( Something went wrong. Please try again later",
+			by: "--",
+			url: "--",
+			time: "--",
+		};
 	}
 }
