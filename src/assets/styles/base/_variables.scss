@@ -1,0 +1,16 @@
+.theme-dark {
+	--color-primary: #ffffff;
+	--color-secondary: #e0e0e0;
+	--color-accent: #149cff;
+	--color-bkg: #121212;
+	--color-subaccent: #144b59;
+	background-color: var(--color-bkg);
+}
+.theme-light {
+	--color-primary: #333333;
+	--color-secondary: #4f4f4f;
+	--color-accent: #149cff;
+	--color-bkg: #ffffff;
+	--color-subaccent: #144b59;
+	background-color: var(--color-bkg);
+}
