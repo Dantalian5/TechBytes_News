@@ -21,14 +21,19 @@ export async function getApiData(url) {
 			method: "GET",
 			headers: headers,
 		});
-		let data = await response.json();
-		return await data;
+		if (response.ok) {
+			let data = await response.json();
+			return data;
+		} else {
+			throw new Error(response.status);
+		}
 	} catch (err) {
 		return {
-			title: "Ups :( Something went wrong. Please try again later",
+			title: "Ups, something went wrong :(",
 			by: "--",
 			url: "--",
 			time: "--",
+			error: true,
 		};
 	}
 }

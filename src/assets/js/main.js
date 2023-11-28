@@ -25,10 +25,18 @@ async function getItems(list, start, cant, parent, type, nav = false) {
 	let data = await getApiData(url(false, list));
 	cards.forEach((card, i) => {
 		getApiData(url(true, data[i + start * 10])).then((item) => {
-			cardUpdater(card, item.title, item.by, item.url, item.time, type);
+			cardUpdater(
+				item.error,
+				card,
+				type,
+				item.title,
+				item.by,
+				item.url,
+				item.time
+			);
 		});
 	});
-	if (nav) {
+	if (nav && !data.error) {
 		setNavigation(data.length, start);
 	}
 }
@@ -40,7 +48,7 @@ function removeAllChildNodes(parent) {
 //---------------------------------------------------
 themeSelector(localStorage.getItem("TBN-theme"));
 getItems("topstories", 0, 3, topGrid, "short");
-getItems("newstories", index, 10, newsGrid, "long", true);
+//getItems("newstories", index, 10, newsGrid, "long", true);
 
 document.addEventListener("click", (event) => {
 	if (event.target.closest(".news-navigation__btn")) {
