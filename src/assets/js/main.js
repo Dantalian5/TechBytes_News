@@ -29,6 +29,7 @@ async function getItems(list, start, cant, parent, type, nav = false) {
 				item.error,
 				card,
 				type,
+				i + 1 + start * 10,
 				item.title,
 				item.by,
 				item.url,
@@ -48,7 +49,7 @@ function removeAllChildNodes(parent) {
 //---------------------------------------------------
 themeSelector(localStorage.getItem("TBN-theme"));
 getItems("topstories", 0, 3, topGrid, "short");
-//getItems("newstories", index, 10, newsGrid, "long", true);
+getItems("newstories", index, 10, newsGrid, "long", true);
 
 document.addEventListener("click", (event) => {
 	if (event.target.closest(".news-navigation__btn")) {
