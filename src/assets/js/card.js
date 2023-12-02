@@ -11,7 +11,7 @@ export function cardUpdater(error, card, type, ...data) {
 			? data[1]
 			: "Sorry, there's a problem with the service, please try later :(";
 	let author = data[2] != undefined ? data[2] : ":(";
-	let url = data[3] != undefined ? data[3] : "";
+	let url = data[3] != undefined ? data[3] : "#";
 	let time = new Date(data[4] * 1000).toLocaleDateString("en-US", {
 		weekday: "short",
 		year: "2-digit",
@@ -23,7 +23,7 @@ export function cardUpdater(error, card, type, ...data) {
 	});
 
 	//card, title, author, url, time, type, error
-	const cardNumber = document.createElement("a");
+	const cardNumber = document.createElement("p");
 	cardNumber.classList.add("card__number", "f-heading", "f-heading--M");
 	cardNumber.textContent = number;
 	card.appendChild(cardNumber);
