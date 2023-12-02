@@ -156,6 +156,48 @@
 .card {
 	padding: 2rem;
 	position: relative;
+	display: grid;
+	grid-template:
+		"number title" min-content
+		"number author" min-content
+		"number url" min-content
+		"number time" min-content
+		/ min-content auto;
+	//grid-template-columns: min-content repeat(auto-fit, auto);
+	gap: 0.5rem 1rem;
+	max-width: 100%;
+	overflow: hidden;
+	&__number {
+		color: var(--color-secondary);
+		grid-area: number;
+		width: min-content;
+	}
+	&__title {
+		display: block;
+		color: var(--color-primary);
+		grid-area: title;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	&__author {
+		grid-area: author;
+	}
+	&__time {
+		grid-area: time;
+		text-decoration: underline;
+	}
+	&__url {
+		grid-area: url;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	&__author,
+	&__time,
+	&__url {
+		color: var(--color-secondary);
+		align-self: start;
+	}
 	&.loading {
 		height: 10rem;
 		&::after {
@@ -178,24 +220,56 @@
 	&--line-bottom {
 		border-bottom: 1px solid var(--color-secondary);
 	}
-	&__head {
-		display: block;
-		color: var(--color-primary);
-		margin-bottom: 1rem;
-	}
-	&__text {
-		color: var(--color-secondary);
-		display: flex;
-		gap: 0.5rem;
-		margin-bottom: 0.5rem;
-	}
-	&__accent {
+	&--accent {
 		overflow: hidden;
-		text-overflow: ellipsis;
+		text-overflow: inherit;
 		color: var(--color-accent);
-		white-space: nowrap;
+		white-space: inherit;
 	}
 }
+// .card {
+// 	padding: 2rem;
+// 	position: relative;
+// 	&.loading {
+// 		height: 10rem;
+// 		&::after {
+// 			position: absolute;
+// 			left: 50%;
+// 			top: 50%;
+// 			transform: translate(-50%, -50%);
+// 			content: "";
+// 			width: 2rem;
+// 			height: 2rem;
+// 			border-radius: 50%;
+// 			border: 5px solid #ffffff24;
+// 			border-top: 6px solid var(--color-accent);
+// 			animation: spin 1s linear infinite;
+// 		}
+// 	}
+// 	&--line-top {
+// 		border-top: 1px solid var(--color-secondary);
+// 	}
+// 	&--line-bottom {
+// 		border-bottom: 1px solid var(--color-secondary);
+// 	}
+// 	&__head {
+// 		display: block;
+// 		color: var(--color-primary);
+// 		margin-bottom: 1rem;
+// 	}
+// 	&__text {
+// 		color: var(--color-secondary);
+// 		display: flex;
+// 		gap: 0.5rem;
+// 		margin-bottom: 0.5rem;
+// 	}
+// 	&__accent {
+// 		overflow: hidden;
+// 		text-overflow: ellipsis;
+// 		color: var(--color-accent);
+// 		white-space: nowrap;
+// 	}
+// }
 .news-navigation {
 	display: flex;
 	color: var(--color-primary);

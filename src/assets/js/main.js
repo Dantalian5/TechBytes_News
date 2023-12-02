@@ -25,10 +25,19 @@ async function getItems(list, start, cant, parent, type, nav = false) {
 	let data = await getApiData(url(false, list));
 	cards.forEach((card, i) => {
 		getApiData(url(true, data[i + start * 10])).then((item) => {
-			cardUpdater(card, item.title, item.by, item.url, item.time, type);
+			cardUpdater(
+				item.error,
+				card,
+				type,
+				i + 1 + start * 10,
+				item.title,
+				item.by,
+				item.url,
+				item.time
+			);
 		});
 	});
-	if (nav) {
+	if (nav && !data.error) {
 		setNavigation(data.length, start);
 	}
 }
