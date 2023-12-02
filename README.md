@@ -29,7 +29,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Dantalian5/js-simple-counter">
+  <a href="https://github.com/Dantalian5/TechBytes_News">
     <img src="./logo.svg" alt="Logo" width="80" height="80">
   </a>
 
@@ -38,14 +38,14 @@
   <p align="center">
     "TechBytes_News" is a non-commercial, open-source project designed to function as a technology news application. This is the solution to the therd practical project of the JavaScript course at <a href="https://www.start2impact.it">start2impact UNIVERSITY</a>.
     <br />
-    <a href="https://github.com/Dantalian5/js-simple-counter"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Dantalian5/TechBytes_News"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://js-simple-counter-s2i.vercel.app/">View Live Site</a>
+    <a href="https://techbytes-news.vercel.app/">View Live Site</a>
     ·
-    <a href="https://github.com/Dantalian5/js-simple-counter/issues">Report Bug</a>
+    <a href="https://github.com/Dantalian5/TechBytes_News/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Dantalian5/js-simple-counter/issues">Request Feature</a>
+    <a href="https://github.com/Dantalian5/TechBytes_News/issues">Request Feature</a>
   </p>
 </div>
 
@@ -79,7 +79,7 @@
 
 ## About The Project
 
-[![TechBytes_News][product-screenshot]](./screenshots/screenshot.png)
+[![TechBytes_News][product-screenshot]](./screenshots/Mockup.jpg)
 
 "TechBytes_News" is a non-commercial project that leverages the [Hacker News API](https://github.com/HackerNews/API) from [Y-Combinator](https://news.ycombinator.com/news) to showcase updated technology news. This open-source site, created for educational purposes, features a minimalist and responsive design with light and dark modes for enhanced readability. Developed in HTML, CSS, and JavaScript, it ensures easy navigation and a smooth user experience while highlighting the most important tech news.
 
@@ -132,6 +132,8 @@
 
 Main features:
 
+- Responsibe web page
+- Show the latest news from Hacker News API
 -
 
 Extra features:
@@ -149,8 +151,14 @@ Functionalities of webpage:
 ## Roadmap
 
 - [x] Design the Aplication.
+- [x] Create Responsibe Layout
+- [x] Add dark & light theming feacture
+- [x] Add Newsletter Subscription form
+- [x] Create & add Favicons
+- [x] Create an error handling layout
+- [ ] (Optional) Create a multipage website, using latest, top and newsletter as pages main theme
 
-See the [open issues](https://github.com/Dantalian5/js-simple-counter/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Dantalian5/TechBytes_News/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -198,23 +206,25 @@ Made and designed with love by [me](https://marcosvalenzuela.netlify.app).
 ## Acknowledgments
 
 - [start2impact University](https://www.start2impact.it)
-- [iconify](https://icon-sets.iconify.design)
+- [Hacker News API](https://github.com/HackerNews/API)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Dantalian5/js-simple-counter.svg?style=for-the-badge
-[contributors-url]: https://github.com/Dantalian5/js-simple-counter/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Dantalian5/js-simple-counter.svg?style=for-the-badge
-[forks-url]: https://github.com/Dantalian5/js-simple-counter/network/members
-[stars-shield]: https://img.shields.io/github/stars/Dantalian5/js-simple-counter.svg?style=for-the-badge
-[stars-url]: https://github.com/Dantalian5/js-simple-counter/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Dantalian5/js-simple-counter.svg?style=for-the-badge
-[issues-url]: https://github.com/Dantalian5/js-simple-counter/issues
-[license-shield]: https://img.shields.io/github/license/Dantalian5/js-simple-counter.svg?style=for-the-badge
-[license-url]: https://github.com/Dantalian5/js-simple-counter/blob/master/LICENSE.md
+[contributors-shield]: https://img.shields.io/github/contributors/Dantalian5/TechBytes_News.svg?style=for-the-badge
+[contributors-url]: https://github.com/Dantalian5/TechBytes_News/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Dantalian5/TechBytes_News.svg?style=for-the-badge
+[forks-url]: https://github.com/Dantalian5/TechBytes_News/network/members
+[stars-shield]: https://img.shields.io/github/stars/Dantalian5/TechBytes_News.svg?style=for-the-badge
+[stars-url]: https://github.com/Dantalian5/TechBytes_News/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Dantalian5/TechBytes_News.svg?style=for-the-badge
+[issues-url]: https://github.com/Dantalian5/TechBytes_News/issues
+[license-shield]: https://img.shields.io/github/license/Dantalian5/TechBytes_News.svg?style=for-the-badge
+[license-url]: https://github.com/Dantalian5/TechBytes_News/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/marcos-valenzuela-coding
-[product-screenshot]: ./screenshots/screenshot.png
+[product-screenshot]: ./screenshots/Mockup.jpg
+
+https://github.com/Dantalian5/TechBytes_News
