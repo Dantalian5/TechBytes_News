@@ -39,7 +39,7 @@
 		<link rel="stylesheet" href="./assets/styles/style.scss" />
 	</head>
 	<body class="theme-dark">
-		<div class="l-navbar">
+		<div class="l-navbar" aria-label="Main Navigation">
 			<div class="navlogo">
 				<div class="navlogo__logo">
 					<svg
@@ -48,12 +48,7 @@
 						viewBox="0 0 16.933334 16.933334"
 					>
 						<defs id="defs2" />
-						<g
-							inkscape:label="Layer 1"
-							inkscape:groupmode="layer"
-							id="layer1"
-							transform="translate(-75.986574,-84.959157)"
-						>
+						<g id="layer1" transform="translate(-75.986574,-84.959157)">
 							<path
 								id="rect11647"
 								style="
@@ -175,7 +170,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="l-header">
+		<div class="l-header" aria-label="Header">
 			<div class="l-header__hero hero">
 				<h2 class="hero__title-top f-heading">TechBytes</h2>
 				<img
@@ -188,26 +183,10 @@
 			</div>
 			<div class="l-header__top3 top3">
 				<h2 class="f-heading f-heading--M top3__title">Top Stories:</h2>
-				<div id="js-topStories">
-					<!-- <div class="card card--line-top">
-						<h3 class="card__head f-heading f-heading--M">
-							Lorem Ipsum Dolor Sit
-						</h3>
-						<p class="card__text f-body f-body--M">
-							by <span class="card__accent card__author">Author Name</span>
-						</p>
-						<p>at <span>-- / -- / -- </span></p>
-						<p class="card__text f-body f-body--M">
-							on
-							<span class="card__accent"
-								>https://www.example.com/news/this</span
-							>
-						</p>
-					</div> -->
-				</div>
+				<div id="js-topStories"></div>
 			</div>
 		</div>
-		<div id="news" class="l-content">
+		<div id="news" class="l-content" aria-label="News">
 			<h2 class="section-title f-heading f-heading--L">Latest News</h2>
 			<div id="js-newsGrid" class="l-news-grid"></div>
 			<div class="news-navigation f-body f-body--L">
@@ -216,10 +195,10 @@
 				<button class="news-navigation__btn">Next</button>
 			</div>
 		</div>
-		<div id="newsletter" class="l-newsletter">
+		<div id="newsletter" class="l-newsletter" aria-label="Newsletter">
 			<h2 class="section-title f-heading f-heading--L">Newsletter</h2>
 			<div class="l-newsletter__wrapper">
-				<form action="" id="myForm" class="newsletter-form">
+				<form action="" id="myForm" class="newsletter-form" autocomplete="on">
 					<label for="formName" class="newsletter-form__label f-body f-body--L"
 						>Name:</label
 					>
@@ -229,7 +208,8 @@
 						type="text"
 						title="Enter your email"
 						placeholder="Jhony Updated"
-						requiered
+						autocomplete="name"
+						required
 					/>
 					<label for="formMail" class="newsletter-form__label f-body f-body--L"
 						>Email:</label
@@ -241,6 +221,7 @@
 						placeholder="example@mail.com"
 						pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
 						title="please, provide a valid email"
+						autocomplete="email"
 						required
 					/>
 					<button
@@ -263,17 +244,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="l-footer">
+		<div class="l-footer" aria-label="Footer">
 			<div class="footer">
 				<h4 class="footer__title f-heading f-heading--S">
 					<span
 						><svg width="1em" height="1em" viewBox="0 0 16.933334 16.933334">
 							<defs />
-							<g
-								inkscape:label="Layer 1"
-								inkscape:groupmode="layer"
-								transform="translate(-75.986574,-84.959157)"
-							>
+							<g transform="translate(-75.986574,-84.959157)">
 								<path
 									style="
 										opacity: 1;
